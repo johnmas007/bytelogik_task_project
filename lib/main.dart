@@ -1,4 +1,5 @@
 import 'package:bytelogik_task/app/views/home_view.dart';
+import 'package:bytelogik_task/app/views/login_view.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -25,7 +26,7 @@ class MyApp extends ConsumerWidget {
       theme: ThemeData(primarySwatch: Colors.blue),
       home: authState == AuthStatus.loading
           ? const Scaffold(body: Center(child: CircularProgressIndicator()))
-          : const HomeView(),
+          : const LoginView(),
     );
   }
 }
